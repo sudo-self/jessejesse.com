@@ -6,6 +6,7 @@ export default function Document() {
     url: "https://jessejesse.com",
     description: "Creating something useful for the world one line of code at a time.",
     title: "Jesse Roper — Developer",
+    siteName: "JesseRoper.com",
   };
 
   return (
@@ -24,6 +25,7 @@ export default function Document() {
         <meta property="og:title" content={headdata.title} />
         <meta property="og:description" content={headdata.description} />
         <meta property="og:image" content={headdata.image} />
+        <meta property="og:site_name" content={headdata.siteName} />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -42,7 +44,7 @@ export default function Document() {
         />
 
         {/* Favicon */}
-        <link rel="icon" href="https://bimi-svg.netlify.app/bimi-logo.svg" />
+        <link rel="icon" href={headdata.image} />
 
         {/* JSON-LD Structured Data */}
         <script
@@ -76,4 +78,5 @@ export default function Document() {
     </Html>
   );
 }
+
 
